@@ -1,8 +1,36 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Video Streaming</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ecf0f1;
+      text-align: center;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #3498db;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    video {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
 <body>
-<h1> Saved Video Streaming</h1>
-  <video width="320" height="240" controls autoplay>
-    <source src= {{ url_for('static', filename="myvideo.webm") }} type="video/webm">
-video not available</video>
+  <h1>Saved Video Streaming</h1>
+  <video width="640" height="360" controls autoplay>
+    <source src="{{ url_for('static', filename='myvideo.webm') }}" type="video/webm">
+    Video not available
+  </video>
 </body>
 </html>

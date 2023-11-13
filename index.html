@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Video Experience</title>
+  <title>Video Streaming Experience</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ecf0f1;
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
       text-align: center;
       margin: 20px;
     }
 
     h1 {
-      color: #3498db;
-      font-size: 2em;
-      margin-bottom: 20px;
+      color: #333;
     }
 
     form {
@@ -23,64 +21,61 @@
       margin: 0 auto;
       background-color: #fff;
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     legend {
-      font-size: 1.5em;
+      font-size: 1.2em;
       font-weight: bold;
-      margin-bottom: 15px;
-      color: #2c3e50;
+      margin-bottom: 10px;
     }
 
     label {
       display: block;
       margin: 10px 0;
       font-style: italic;
-      color: #7f8c8d;
     }
 
     input[type="radio"] {
-      margin-right: 8px;
+      margin-right: 5px;
     }
 
     button {
-      background-color: #e74c3c;
+      background-color: #3498db;
       color: #fff;
-      padding: 12px 24px;
+      padding: 10px 20px;
       border: none;
-      border-radius: 6px;
+      border-radius: 4px;
       cursor: pointer;
-      font-size: 18px;
+      font-size: 16px;
       transition: background-color 0.3s ease;
     }
 
     button:hover {
-      background-color: #c0392b;
+      background-color: #2980b9;
     }
 
     img {
       max-width: 100%;
       height: auto;
-      border-radius: 12px;
+      border-radius: 8px;
       margin-top: 20px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
 <body>
-  <h1>Immersive Video Experience</h1>
-  <img src="{{ url_for('video_feed') }}" alt="Video Stream">
+  <h1>Video Streaming Demonstration</h1>
   <form name="passdata" action="." method="post">
-    <legend><b><i>Choose Your Experience</i></b></legend>
+    <legend><b><i>Options</i></b></legend>
     <input type="radio" name="psw1" value='0' id="savestream" required>
     <label for="savestream">Missed the Live Stream, See the Saved Stream.</label><br>
     <input type="radio" name="psw1" value='2' id="sstream" required>
-    <label for="sstream">Want to Experience The Live Stream</label><br>
+    <label for="sstream">Want to See The Live Stream</label><br>
     <input type="radio" name="psw1" value='1' id="closestream" required>
-    <label for="closestream">Close the Stream</label><br> 
-    <button type="Submit">Start the Experience</button>
+    <label for="closestream">Close Stream</label><br> 
+    <button type="Submit">Submit</button>
   </form>
+  <img src="{{ url_for('video_feed') }}" alt="Video Stream">
 </body>
 </html>
