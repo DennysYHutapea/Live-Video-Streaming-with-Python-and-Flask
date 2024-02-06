@@ -34,8 +34,9 @@ def getval():
 		return render_template("index.html")
 	if k=='1':
 		cap.release()
-		return render_template("index.html")
+		return render_template("exit.html")
 	if k=='0':
+		cap.release()
 		return render_template("saved.html")
 @app.route('/video_feed')
 def video_feed():
